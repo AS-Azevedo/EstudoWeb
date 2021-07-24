@@ -1,0 +1,75 @@
+.border{
+    border: 1px solid black;
+    width: 500px;
+    height: 400px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.margin{
+    margin-top: 30px;
+}
+
+/* Position static é o position padrão de todos os elementos, não podendo ser movido como os outros */
+.static{
+    position: static;
+    left: 10px;
+    top: 10px;
+}
+
+/* Position relative aceita ser movido, porém as distâncias serão em relação a sua posição inicial e não afeta outros elementos próximos, diferente do margin*/
+.relative{
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+/* Position absolute não tem interação com outros elementos, o elemento verde ignora que existe um elemento azul em cima e ocupa o lugar do mesmo
+é como se o position absolute colocasse o elemento por cima dos outros*/
+.absolute{
+    position: absolute;
+    left: 40px;
+}
+
+/* O position absolute funciona em relação ao elemento pai, se ele não for do tipo static, se o elemento pai for do tipo static, ele pula para o avô dele até chegar no body */
+.absolute_static{
+    position: absolute;
+    right: 0;
+}
+
+.border_relative{
+    position: relative;
+}
+
+.absolute_relative{
+    position: absolute;
+    right: 0;
+}
+
+/* O position fixed é relativo a viewport, portanto não ocupa espaço de outros elementos, assim como o absolute, e independente da posição da barra de rolagem, ele será exibido na tela*/
+.fixed{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* O position sticky tem um comportamento muito similar ao fixed, porém ele afeta o posicionamento de outros elementos, igual o static e o relative, porém ele acompanha a barra de rolagem*/
+.sticky{
+    position: sticky;
+    bottom: 0px;
+}
