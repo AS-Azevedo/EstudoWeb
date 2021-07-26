@@ -1,0 +1,32 @@
+.card{
+    width: 400px;      
+    height: 200px;
+    border: 2px solid green;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+ /* Alinhamento vertical com line-height */
+.c1{
+    line-height: 200px; /*altera a altura da linha, mas preciso saber o tamanho do elemento pai */
+}  
+
+/* Alinhamento vertical com position e transform */
+.c2{
+    position: absolute;  /*elemento pai não pode ser static*/
+    top: 50%;  /*falta o alinhamento do conteúdo*/
+    left: 50%; /*position: absolute anula o text-align*/
+    transform: translate(-50%, -50%);  /*alinhanto do conteúdo (X, Y)*/
+}
+
+/* Alinhamento vertical com padding */
+
+.card2{
+    clear: left; /*clear left para que não tenha nenhum elemento na esquerda*/
+    float: left; /*float left para que ele fique flutuando na esquerda*/
+    border: 2px solid green; /*definições da borda*/
+    padding-left: 150px; /*Dimensões do cartão (somando a dimensão do conteúdo)*/
+    padding-right: 150px; /*Dimensões do cartão (somando a dimensão do conteúdo)*/
+    padding-top: 100px; /*Dimensões do cartão (somando a dimensão do conteúdo)*/
+    padding-bottom: 100px; /*Dimensões do cartão (somando a dimensão do conteúdo)*/
+}
