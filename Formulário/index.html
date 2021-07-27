@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <div class="div1">
+        <div class="div2">
+            <h1>Cadastro</h1>
+            <!-- method: GET → aparece os dados na barra de navegação -->
+            <!-- method: POST → nao aparece os dados na barra de navegação, o que é útil para páginas de login por exemplo-->
+            <!-- action → se for no mesmo domínio apenas o final do link, se for outro é necessário colocar o link inteiro -->
+            <form method="POST" action="#">
+                <!-- text → campo de texto -->
+                <input type="text" name="email">
+                <!-- password → nao permite que os caracteres fiquem aparentes -->
+                <input type="password" name="senha"> <br>
+                <!-- checkbox → insere uma caixa para selecionavel, podendo ser usado para preencher opçoes de cursos desejaveis por exemplo, e para mais de uma opcao no checkbox, precisamos 
+                designar um valor para cada checkbox-->
+                <input type="checkbox" name="cursos" value="op1"> Curso 1 <br>
+                <input type="checkbox" name="cursos" value="op2"> Curso 2 <br>
+                <!-- radio → para formularios com apenas uma opção, por exemplo formularios de genero, onde não podemos selecionar mais de um, é importante que o nome seja o mesmo para que 
+                apenas uma opção possa ser selecionada, e para já iniciar com uma das opções checadas, usamos o checked-->
+                <input type="radio" name="gender" value="m" checked> Mas <br>
+                <input type="radio" name="gender" value="f"> Fem <br>
+                <!-- diferente do input, a tag select cria um dropbox, comumente usada para selecionar cidades entre outras coisas, podemos definir um tamanho máximo através do atributo size, e permitir
+                marcar mais de uma opção, com o atributo multiple-->
+                <select name="estado" size="1" multiple>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="sc">Santa Catarina</option>
+                </select> <br>
+                <!-- para criar uma área onde o úsuario possa enviar uma mensagem longa, usamos a tag textarea -->
+                <textarea name="message"></textarea> <br>
+               <!-- submit → botao de envio, podendo alterar a mensagem interna do botão através do value-->
+                <input type="submit" value="Enviar">
+                <!-- reset → outro botão que podemos usar é o botão reset, que diferente do submit, vai simplesmente resetar todos os campos preenchidos, podendo alterar a mensagem 
+                interna do botão através do value-->
+                <input type="reset" value="Limpar">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
