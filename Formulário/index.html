@@ -30,8 +30,8 @@
                 apenas uma opção possa ser selecionada, e para já iniciar com uma das opções checadas, usamos o checked-->
                 <input type="radio" name="gender" value="m" checked> Mas <br>
                 <input type="radio" name="gender" value="f"> Fem <br>
-                <!-- diferente do input, a tag select cria um dropbox, comumente usada para selecionar cidades entre outras coisas, podemos definir um tamanho máximo através do atributo size, e permitir
-                marcar mais de uma opção, com o atributo multiple-->
+                <!-- diferente do input, a tag select cria um dropbox, comumente usada para selecionar cidades entre outras coisas, podemos definir um tamanho máximo através do atributo size, 
+                e permitir marcar mais de uma opção, com o atributo multiple-->
                 <select name="estado" size="1" multiple>
                     <option value="rj">Rio de Janeiro</option>
                     <option value="sp">São Paulo</option>
@@ -39,6 +39,22 @@
                 </select> <br>
                 <!-- para criar uma área onde o úsuario possa enviar uma mensagem longa, usamos a tag textarea -->
                 <textarea name="message"></textarea> <br>
+                <!-- color → abre um menu de cor -->
+                <input type="color" name="cor"> <br>
+                <!-- date → abre um calendário, podemos determinar uma data máxima, ou uma data minima -->
+                <input type="date" name="data" max="2021-12-31"> <br>
+                <!-- datetime-local → muito parecido com o date, mas podemos colocar horario também -->
+                <input type="datetime-local" name="data-horario"> <br>
+                <!-- file → permite adicionar um arquivo na página -->
+                <input type="file" name="arquivo"> <br>
+                <!-- number → apenas números podendo especificar um valor máximo e um valor mínimo -->
+                <input type="number" name="números"> <br>
+                <!-- range → insere uma barra, muito similiar a uma barra de volume -->
+                <input type="range" min="0" max="10" name="intervalo">
+                <!-- tel → campo para inserir telefone, no navegador não faz diferença, mas no celular aparece apenas um teclado númerico -->
+                <input type="tel" name="telefone">
+                <!-- email → abre um campo semelhante ao text, porém ele automaticamente verifica se o que está sendo escrito é um email ou não, caso não for, ele aparece uma mensagem de erro -->
+                <input type="email" name="email">
                <!-- submit → botao de envio, podendo alterar a mensagem interna do botão através do value-->
                 <input type="submit" value="Enviar">
                 <!-- reset → outro botão que podemos usar é o botão reset, que diferente do submit, vai simplesmente resetar todos os campos preenchidos, podendo alterar a mensagem 
